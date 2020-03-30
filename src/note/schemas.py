@@ -1,7 +1,5 @@
-from flask_marshmallow import Marshmallow
-from app import app
-
-ma = Marshmallow(app)
+from app import ma
+from src.note.models import NoteModel
 
 
 class NoteSchema(ma.SQLAlchemyAutoSchema):

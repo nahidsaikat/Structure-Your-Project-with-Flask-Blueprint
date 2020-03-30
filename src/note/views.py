@@ -1,18 +1,19 @@
 from flask import Blueprint, request, jsonify
 
-from src.models import NoteModel
-from src.schemas import NoteSchema
+from app import db
+from src.note.models import NoteModel
+from src.note.schemas import NoteSchema
 
-
-note_blueprint = Blueprint('note_blueprint', __name__)
 
 note_schema = NoteSchema()
 notes_schema = NoteSchema(many=True)
+note_blueprint = Blueprint('note_blueprint', __name__)
 
 
 @note_blueprint.route('/')
 def hello_world():
     return 'Hello, World!'
+
 
 @note_blueprint.route('/note/')
 def note_list():
