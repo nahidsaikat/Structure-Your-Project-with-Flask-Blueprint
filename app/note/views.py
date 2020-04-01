@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify
 
-from app import db
-from src.note.models import NoteModel
-from src.note.schemas import NoteSchema
+from app.extensions import db
+from .models import NoteModel
+from .schemas import NoteSchema
 
 
 note_schema = NoteSchema()

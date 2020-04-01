@@ -1,5 +1,5 @@
-from app import ma
-from src.note.models import NoteModel
+from app.extensions import ma
+from app.note.models import NoteModel
 
 
 class NoteSchema(ma.SQLAlchemyAutoSchema):
